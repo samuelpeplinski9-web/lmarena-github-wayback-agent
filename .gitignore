@@ -1,0 +1,27 @@
+# lmarena-github-wayback-agent
+
+LMArena AI agent with GitHub connector and Wayback Machine video archival access for sandbox environments.
+
+## Run locally
+
+```bash
+npm install
+npm start
+```
+
+Then open:
+
+- http://localhost:3000/
+- http://localhost:3000/agent
+
+## Features
+
+- Arena-style agent interface
+- GitHub repo metadata connector
+- Wayback Machine archive action
+- Lightweight Express app for local development and testing
+
+## Notes
+
+This repository includes a working agent UI scaffold and a simple runtime for the intended Arena Agent experience.
+

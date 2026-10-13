@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">A</div>
+          <div class="brand-copy">
+            <span class="brand-name">Arena</span>
+            <span class="brand-subtitle">Agent Mode</span>
+          </div>
+        </div>
+
+        <nav class="top-actions">
+          <button class="ghost-button">Overview</button>
+          <button class="ghost-button">Runs</button>
+          <button class="primary-button">New task</button>
+        </nav>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar">
+          <div class="panel-header">
+            <span>Workspace</span>
+            <span class="status-dot connected"></span>
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-header-line">
+              <span class="repo-icon">GH</span>
+              <span id="repo-name">samuelpeplinski9-web/lmarena-github-wayback-agent</span>
+            </div>
+            <div class="repo-meta">
+              <span id="repo-description">GitHub connector + Wayback archive workspace</span>
+            </div>
+            <div class="repo-stats">
+              <span>Public</span>
+              <span id="repo-stars">☆ 0</span>
+            </div>
+          </div>
+
+          <div class="file-list">
+            <h3>Files</h3>
+            <ul id="file-list">
+              <li class="file-item active">README.md</li>
+              <li class="file-item">server.js</li>
+              <li class="file-item">public/index.html</li>
+              <li class="file-item">public/app.js</li>
+            </ul>
+          </div>
+
+          <div class="archive-panel">
+            <label for="archive-url">Wayback URL</label>
+            <input id="archive-url" type="text" value="https://arena.ai/agent" />
+            <button id="archive-button" class="secondary-button">Archive page</button>
+          </div>
+        </aside>
+
+        <section class="chat-panel">
+          <div class="panel-header panel-header-spread">
+            <span>Conversation</span>
+            <span class="mini-badges">
+              <span class="badge live">Live</span>
+              <span class="badge sync">GitHub sync</span>
+            </span>
+          </div>
+
+          <div class="response-stream" id="response-stream">
+            <div class="message assistant">
+              <div class="message-avatar">AI</div>
+              <div class="message-content">
+                <p>Ready to help with your Arena agent task. Tell me what you want to build, fix, review, or launch.</p>
+              </div>
+            </div>
+          </div>
+
+          <form id="task-form" class="task-form">
+            <textarea id="task-input" rows="3" placeholder="Describe the goal for the agent…"></textarea>
+            <div class="form-actions">
+              <button type="button" id="github-button" class="ghost-button">Connect GitHub</button>
+              <button type="submit" class="primary-button">Run agent</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
